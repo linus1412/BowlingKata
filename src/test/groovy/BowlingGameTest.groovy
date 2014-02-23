@@ -37,12 +37,22 @@ public class BowlingGameTest extends GroovyTestCase {
     }
 
     void testOneStrike() {
-        g.roll(10) // strike
+        rollStrike()
         g.roll(3)
         g.roll(4)
         rollMany(16, 0)
 
         assert 24 == g.score()
+    }
+
+    void testPerfectGame() {
+        rollMany(12, 10)
+
+        assert 300 == g.score()
+    }
+
+    private void rollStrike() {
+        g.roll(10)
     }
 
 
