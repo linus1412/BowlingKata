@@ -1,3 +1,7 @@
+package bowling
+
+import bowling.Game
+
 public class BowlingGameTest extends GroovyTestCase {
 
     Game g
